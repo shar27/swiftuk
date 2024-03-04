@@ -36,13 +36,29 @@ export default function Contact() {
           </InnerWrapper>
         </div>
       </div>
+      <BottomFooter>
+    
+      <div className=""><h4>hello@liverpoolpropertymaintenance.com</h4></div>
+        <div><h4>Whatsapp: +44 7907 772 626</h4></div>
+        
+    
+      </BottomFooter>
     </Wrapper>
+    
   );
 }
 
 const Wrapper = styled.div`
   width: 100%;
 `;
+
+const BottomFooter = styled.div`
+display:flex;
+justify-content: space-between;
+color:black;
+font-weight:semi-bold;
+padding: 1.5rem;
+`
 const InnerWrapper = styled.div`
   @media (max-width: 550px) {
     flex-direction: column;

@@ -20,11 +20,7 @@ import FormatPaintOutlinedIcon from '@mui/icons-material/FormatPaintOutlined';
 export default function Services() {
   return (
     <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
-          <ClientSlider />
-        </div>
-      </div>
+      
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
