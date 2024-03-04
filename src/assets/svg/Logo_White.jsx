@@ -1,16 +1,14 @@
 import * as React from "react";
 
-
 function SvgComponent(props) {
   return (
-
-
+   
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="170" height="200" viewBox="0 0 500.000000 500.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="white" stroke="none">
 <path d="M1900 3269 c-322 -209 -596 -388 -610 -397 l-25 -16 30 -12 c36 -15
 94 -18 127 -5 14 5 240 149 504 321 573 373 557 364 585 355 22 -7 139 -82
 559 -357 484 -317 490 -321 542 -326 44 -4 109 12 108 27 -1 3 -233 157 -516
@@ -141,8 +139,6 @@ l20 -37 1 52 c0 49 -1 52 -32 62 -52 15 -129 20 -178 10z"/>
 c27 0 37 -6 49 -27 l15 -28 1 42 c0 23 -3 43 -7 45 -5 2 -55 2 -112 0z"/>
 </g>
 </svg>
-
-
 
   );
 }

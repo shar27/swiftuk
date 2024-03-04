@@ -11,6 +11,7 @@ import ProjectImg4 from "../../assets/img/projects/4.png";
 import ProjectImg5 from "../../assets/img/projects/5.png";
 import ProjectImg6 from "../../assets/img/projects/6.png";
 import AddImage2 from "../../assets/img/add/add2.png";
+import Trustpilot from '../../assets/img/trustpilot.jpg'
 
 export default function Projects() {
   return (
@@ -18,14 +19,15 @@ export default function Projects() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Projects</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            <h1 className="font40 extraBold">TRUSTPILOT REVIEWS</h1>
+            <img
+            src={Trustpilot}
+            width="auto"
+            height="auto"
+            />
+
           </HeaderInfo>
-          <div className="row textCenter">
+          {/* <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg1}
@@ -81,7 +83,7 @@ export default function Projects() {
             <div style={{ margin: "50px 0", width: "200px" }}>
               <FullButton title="Load More" action={() => alert("clicked")} />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     
@@ -97,19 +99,7 @@ const HeaderInfo = styled.div`
     text-align: center;
   }
 `;
-const Advertising = styled.div`
-  padding: 100px 0;
-  margin: 100px 0;
-  position: relative;
-  @media (max-width: 1160px) {
-    padding: 60px 0 40px 0;
-  }
-  @media (max-width: 860px) {
-    flex-direction: column;
-    padding: 0 0 30px 0;
-    margin: 80px 0 0px 0;
-  }
-`;
+
 const ButtonsRow = styled.div`
   @media (max-width: 860px) {
     justify-content: space-between;

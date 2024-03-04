@@ -31,6 +31,7 @@ export default function TopNavbar() {
             <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
               Property <br/>Maintenance Liverpool
             </h1>
+            
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
@@ -46,16 +47,16 @@ export default function TopNavbar() {
                 Services
               </Link>
             </li>
-            <li className="semiBold font15 pointer">
+            {/* <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
                 Projects
               </Link>
-            </li>
-            <li className="semiBold font15 pointer">
+            </li> */}
+            {/* <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
                 Blog
               </Link>
-            </li>
+            </li> */}
           
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>

@@ -4,11 +4,18 @@ import styled from "styled-components";
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
+
 // Assets
 import AddImage1 from "../../assets/img/add/1.png";
 import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
+
+//icons
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import FormatPaintOutlinedIcon from '@mui/icons-material/FormatPaintOutlined';
 
 export default function Services() {
   return (
@@ -29,36 +36,66 @@ export default function Services() {
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
-              <ServiceBox
-                icon="van"
-                title="House Clearance"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+              <VanIcon>
+              <LocalShippingIcon
+              sx={{
+                width: 100,
+                height:100,
+                
+              }}
+              />  
+              </VanIcon>
+             <h4>House Clearance <br/> & Removals</h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <CleaningIcon
+              
+              >
+              <CleaningServicesOutlinedIcon
+              sx={{
+                width: 100,
+                height: 100,
+              }}
+              
               />
+                </CleaningIcon>
+                <h4>End of tenancy <br/> & Deep cleaning</h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox
-                icon="brush"
-                title="End of tenancy/Deep cleaning"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-              />
+              <HandyManIcon>
+                <ConstructionIcon
+                sx={{
+                  width:100,
+                  height:100,
+                }}
+                />
+              </HandyManIcon>
+              <h4>Handy man repairs</h4>
             </ServiceBoxWrapper>
+            
             <ServiceBoxWrapper>
-              <ServiceBox
-                icon="hammer"
-                title="Handy man repair"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-              />
+              <PaintIcon>
+                <FormatPaintOutlinedIcon
+                sx={{
+                  width:100,
+                  height:100,
+                }}
+                />
+              </PaintIcon>
+              <h4>Painting <br/> & re-decorating</h4>
             </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox icon="roller" title="Painting" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
-
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox icon="hammer" title="Carpet removal" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
-
-            </ServiceBoxWrapper>
+            
+          
           </ServiceBoxRow>
-         
+         <h4>We offer a wide range of other services - get in contact today to see how we can help</h4>
+         <BtnWrapper>
+            
+            <a href="mailto:hello@propertydealsourcinguk.co.uk">
+            <FullButton title="Contact us" 
+            
+            />
+            </a>
+          </BtnWrapper>
         </div>
         
       </div>
@@ -69,11 +106,40 @@ export default function Services() {
 const Wrapper = styled.section`
   width: 100%;
 `;
+
+const BtnWrapper = styled.div`
+  max-width: 190px;
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
+`;
 const ServiceBoxRow = styled.div`
   @media (max-width: 860px) {
     flex-direction: column;
   }
 `;
+
+const VanIcon = styled.div`
+color:black;
+
+`
+const CleaningIcon = styled.div`
+color: black;
+
+`
+
+const HandyManIcon = styled.div`
+color:black;
+
+`
+
+const PaintIcon = styled.div`
+color:black;
+
+`
+
+
+
 const ServiceBoxWrapper = styled.div`
   width: 20%;
   margin-right: 5%;
@@ -89,19 +155,7 @@ const HeaderInfo = styled.div`
     text-align: center;
   }
 `;
-const Advertising = styled.div`
-  margin: 80px 0;
-  padding: 100px 0;
-  position: relative;
-  @media (max-width: 1160px) {
-    padding: 100px 0 40px 0;
-  }
-  @media (max-width: 860px) {
-    flex-direction: column;
-    padding: 0 0 30px 0;
-    margin: 80px 0 0px 0;
-  }
-`;
+
 const ButtonsRow = styled.div`
   @media (max-width: 860px) {
     justify-content: space-between;

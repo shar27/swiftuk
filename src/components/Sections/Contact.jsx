@@ -1,39 +1,58 @@
-import React from "react";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 import styled from "styled-components";
 // Assets
-import ContactImg1 from "../../assets/img/contact-1.png";
-import ContactImg2 from "../../assets/img/contact-2.png";
-import ContactImg3 from "../../assets/img/contact-3.png";
+
 
 export default function Contact() {
+
+const [message, setMessage] = useState('')
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const userEmail = form.current.user_email.value;
+
+    emailjs.sendForm('service_go85cgq', 'template_zjh82na', form.current, 'n3cGJxtvclpiQjFrD')
+      .then((result) => {
+          console.log(result.text);
+          setMessage('Your message has been received')
+      }, (error) => {
+        setMessage('Error sending message, please email hello@propertydealsourcinguk.co.uk')
+          console.log(error.text);
+      });
+  };
+
   return (
     <Wrapper id="contact">
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Let's get in touch</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            <h1 className="font40 extraBold">Get a quote</h1>
+           
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <Form>
+              {message}
+              <Form onSubmit={sendEmail} ref={form} >
                 <label className="font13">First name:</label>
-                <input type="text" id="fname" name="fname" className="font20 extraBold" />
+                <input type="text"  name="fname" className="font20 extraBold" />
                 <label className="font13">Email:</label>
-                <input type="text" id="email" name="email" className="font20 extraBold" />
+                <input type="text"  name="user_email" className="font20 extraBold" />
                 <label className="font13">Subject:</label>
-                <input type="text" id="subject" name="subject" className="font20 extraBold" />
+                <input type="text"  name="subject" className="font20 extraBold" />
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
-              </Form>
+              
               <SumbitWrapper className="flex">
-                <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                <ButtonInput type="submit" value="Send" 
+                className="pointer animate radius8" style={{ maxWidth: "220px" }} />
               </SumbitWrapper>
+              </Form>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
+            {/* <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
               <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
                 <ContactImgBox>
                   <img src={ContactImg1} alt="office" className="radius6" />
@@ -47,7 +66,7 @@ export default function Contact() {
                   <img src={ContactImg3} alt="office" className="radius6" />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -86,13 +105,14 @@ const Form = styled.form`
 `;
 const ButtonInput = styled.input`
   border: 1px solid #7620ff;
-  background-color: #7620ff;
+  background-color: #7620ff !important;
   width: 100%;
-  padding: 15px;
+  height: 50px !important;
+  padding: 15px !important;
   outline: none;
   color: #fff;
   :hover {
-    background-color: #580cd2;
+    background-color: #580cd2 !important;
     border: 1px solid #7620ff;
     color: #fff;
   }
