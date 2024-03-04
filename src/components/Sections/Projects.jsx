@@ -18,7 +18,7 @@ export default function Projects() {
     <Wrapper id="projects">
       <div className="whiteBg">
         <div className="container">
-          <HeaderInfo>
+          {/* <HeaderInfo>
             <h1 className="font40 extraBold">TRUSTPILOT REVIEWS</h1>
             <img
             src={Trustpilot}
@@ -26,7 +26,7 @@ export default function Projects() {
             height="auto"
             />
 
-          </HeaderInfo>
+          </HeaderInfo> */}
           {/* <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox

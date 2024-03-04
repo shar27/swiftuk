@@ -12,7 +12,7 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We Are Property Maintenance Company.</h1>
+          <h1 className="extraBold font60">We are a Property Maintenance Company.</h1>
           <HeaderP className="font13 semiBold">
           Looking for reliable property maintenance services in Liverpool and Manchester? 
           Our experienced team offers comprehensive solutions for residential and commercial properties, 
@@ -20,7 +20,9 @@ export default function Header() {
           Contact us for emergency assistance and ensure your property's upkeep with our expert solutions.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Free Quote" />
+            <a href="#contactForm">
+            <FullButton title="Free Quote"  />
+            </a>
           </BtnWrapper>
         </div>
       </LeftSide>

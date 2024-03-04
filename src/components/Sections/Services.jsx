@@ -90,7 +90,7 @@ export default function Services() {
          <h4>We offer a wide range of other services - get in contact today to see how we can help</h4>
          <BtnWrapper>
             
-            <a href="mailto:hello@propertydealsourcinguk.co.uk">
+            <a href="#contactForm">
             <FullButton title="Contact us" 
             
             />

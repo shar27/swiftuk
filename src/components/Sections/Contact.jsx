@@ -37,7 +37,7 @@ const [message, setMessage] = useState('')
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               {message}
-              <Form onSubmit={sendEmail} ref={form} >
+              <Form onSubmit={sendEmail} ref={form} id="contactForm" >
                 <label className="font13">First name:</label>
                 <input type="text"  name="fname" className="font20 extraBold" />
                 <label className="font13">Email:</label>
