@@ -16,6 +16,7 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import FormatPaintOutlinedIcon from '@mui/icons-material/FormatPaintOutlined';
+import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
 
 export default function Services() {
   return (
@@ -31,6 +32,20 @@ export default function Services() {
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
+          <ServiceBoxWrapper>
+              <HouseIcon>
+              <HouseOutlinedIcon
+                sx={{
+                  width:100,
+                  height:100,
+                }}
+                />
+              </HouseIcon>
+
+              <h4>Find a Tenant Services <br/>
+              Sell your home/Land
+              </h4>
+            </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <VanIcon>
               <LocalShippingIcon
@@ -115,6 +130,10 @@ const ServiceBoxRow = styled.div`
   }
 `;
 
+const HouseIcon = styled.div`
+color:black;
+
+`
 const VanIcon = styled.div`
 color:black;
 

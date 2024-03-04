@@ -28,9 +28,6 @@ export default function TopNavbar() {
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              Property <br/>Maintenance Liverpool
-            </h1>
             
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
@@ -66,7 +63,7 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-            <a href="mailto:hello@liverpoolpropertymaintenance.com">hello@liverpoolpropertymaintenance.com</a> <br/>
+            <a href="mailto:hello@liverpoolpropertymaintenance.com">hello@swiftukproperty.co.uk</a> <br/>
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
               
                 Call today 
