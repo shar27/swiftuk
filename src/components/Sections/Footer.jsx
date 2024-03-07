@@ -39,7 +39,7 @@ export default function Contact() {
       <BottomFooter>
     
       <div className=""><h4>📧 hello@swiftukproperty.co.uk</h4></div>
-        <div><h4>📞 0161 821 0108</h4></div>
+        <div><h4>📞 0333 360 6113</h4></div>
         
     
       </BottomFooter>
