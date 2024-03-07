@@ -39,11 +39,11 @@ const [message, setMessage] = useState('')
               {message}
               <Form onSubmit={sendEmail} ref={form} id="contactForm" >
                 <label className="font13">First name:</label>
-                <input type="text"  name="fname" className="font20 extraBold" />
+                <input required type="text"  name="fname" className="font20 extraBold" />
                 <label className="font13">Email:</label>
-                <input type="text"  name="user_email" className="font20 extraBold" />
+                <input required  type="text"  name="user_email" className="font20 extraBold" />
                 <label className="font13">Subject:</label>
-                <input type="text"  name="subject" className="font20 extraBold" />
+                <input required  type="text"  name="subject" className="font20 extraBold" />
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
               
               <SumbitWrapper className="flex">

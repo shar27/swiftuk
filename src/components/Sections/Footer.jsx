@@ -38,8 +38,8 @@ export default function Contact() {
       </div>
       <BottomFooter>
     
-      <div className=""><h4>hello@swiftukproperty.co.uk</h4></div>
-        <div><h4>Whatsapp: +44 7907 772 626</h4></div>
+      <div className=""><h4>📧 hello@swiftukproperty.co.uk</h4></div>
+        <div><h4>📞 0161 821 0108</h4></div>
         
     
       </BottomFooter>
