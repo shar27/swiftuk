@@ -12,8 +12,7 @@ import Footer from "../components/Sections/Footer"
 export default function Landing() {
   return (
     <>
-   {/* trustpilot, this is my website
-    */}
+   
       <TopNavbar />
       <Header />
       <Reviews/>
