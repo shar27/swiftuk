@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom"; // Import RouterLink
 // Components
-import Sidebar from "../Nav/Sidebar";
+import Sidebar from "./Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
@@ -13,65 +13,105 @@ export default function TopNavbar() {
   const [sidebarOpen, toggleSidebar] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => setY(window.scrollY));
+    const handleScroll = () => setY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () => setY(window.scrollY));
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [y]);
-
+  }, []);
 
   return (
     <>
+      <ContactInfoSmallScreen>
+        <a href="mailto:hello@swiftukproperties.co.uk">📧 hello@swiftukproperties.co.uk</a>
+        <a href="tel:03333606113">📞 0333 360 6113</a>
+      </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
+      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "100px" }}>
         <NavInner className="container flexSpaceCenter">
-          <Link className="pointer flexNullCenter" to="home" smooth={true}>
+          <RouterLink className="pointer flexNullCenter" to="/"onClick={() => {
+        setTimeout(() => {
+          const section = document.getElementById("/");
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 0);
+      }}>
             <LogoIcon />
-            
-          </Link>
+          </RouterLink>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
+              <RouterLink
+                className="pointer"
+                style={{ padding: "10px 15px" }}
+                to="/"
+                onClick={() => {
+                  setTimeout(() => {
+                    const section = document.getElementById("services");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 0);
+                }}
+              >
                 Home
-              
-              </Link>
+              </RouterLink>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+              <RouterLink
+                className="pointer"
+                style={{ padding: "10px 15px" }}
+                to="/#services"
+                onClick={() => {
+                  setTimeout(() => {
+                    const section = document.getElementById("services");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 0);
+                }}
+              >
                 Services
-              </Link>
+              </RouterLink>
             </li>
-            {/* <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-                Projects
-              </Link>
-            </li> */}
-            {/* <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Blog
-              </Link>
-            </li> */}
-          
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
+              <RouterLink
+                className="pointer"
+                style={{ padding: "10px 15px" }}
+                to="/landlords"
+              >
+                Guaranteed Rent
+              </RouterLink>
+            </li>
+            <li className="semiBold font15 pointer">
+              <RouterLink
+                className="pointer"
+                style={{ padding: "10px 15px" }}
+                to="/#contact"
+                onClick={() => {
+                  setTimeout(() => {
+                    const section = document.getElementById("contact");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 0);
+                }}
+              >
                 Contact
-              </Link>
+              </RouterLink>
             </li>
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-            <a href="mailto:hello@swiftukproperties.co.uk">📧 hello@swiftukproperties.co.uk</a> <br/>
+              <a href="mailto:hello@swiftukproperties.co.uk" style={{ padding: "10px 30px 10px 0" }}>📧 hello@swiftukproperties.co.uk</a> <br/>
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
-              
-                Call today 
-                📞 0333 360 6113
+                Call today 📞 0333 360 6113
               </a>
             </li>
-           
           </UlWrapperRight>
         </NavInner>
       </Wrapper>
@@ -79,17 +119,52 @@ export default function TopNavbar() {
   );
 }
 
+const ContactInfoSmallScreen = styled.div`
+  display: none;
+  background-color: #003366; /* Dark blue background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+
+  a {
+    color: white;
+    display: block;
+    padding: 5px 0;
+  }
+
+  @media (max-width: 760px) {
+    position: fixed;
+    width: 100%;
+    display: block;
+    z-index: 999;
+  }
+`;
+
 const Wrapper = styled.nav`
   width: 100%;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   z-index: 999;
+  transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
+
+  @media (max-width: 760px) {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 999;
+    transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
 `;
+
 const NavInner = styled.div`
   position: relative;
   height: 100%;
-`
+`;
+
 const BurderWrapper = styled.button`
   outline: none;
   border: 0px;
@@ -97,20 +172,22 @@ const BurderWrapper = styled.button`
   height: 100%;
   padding: 0 15px;
   display: none;
+
   @media (max-width: 760px) {
     display: block;
   }
 `;
+
 const UlWrapper = styled.ul`
   display: flex;
+
   @media (max-width: 760px) {
     display: none;
   }
 `;
+
 const UlWrapperRight = styled.ul`
   @media (max-width: 760px) {
     display: none;
   }
 `;
-
-
