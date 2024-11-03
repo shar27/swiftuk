@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 // Sections
 import TopNavbar from "../components/Nav/TopNavbar";
+import Projects from '../components/Sections/Projects'
 import Header from "../components/Sections/Header";
 import Services from "../components/Sections/Services";
 import Reviews from "../components/Sections/Reviews";
@@ -10,6 +11,7 @@ import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer";
 import Locations from "../components/Sections/Locations";
 import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
+import OtherAreas from "../components/Sections/OtherAreas";
 
 export default function Landing() {
   const [showArrow, setShowArrow] = useState(false);
@@ -61,7 +63,9 @@ export default function Landing() {
       </FloatWrapper>
       <Reviews />
       <Services />
+      <Projects/>
       <Locations/>
+      <OtherAreas/>
       <Contact />
       <Footer />
     </>

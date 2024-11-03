@@ -12,7 +12,7 @@ export default function Locations() {
   return (
     <div>
       <h2 style={{ color: "black", fontSize: "32px", textAlign: "center" }}>
-        Areas we cover
+        Areas we cover:
       </h2>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
