@@ -151,7 +151,7 @@ const ContactImgBox = styled.div`
   align-self: flex-end; 
   margin: 10px 30px 10px 0;
 `;
-const SumbitWrapper = styled.div`
+const SubmitWrapper = styled.div`
   @media (max-width: 991px) {
     width: 100%;
     margin-bottom: 50px;
