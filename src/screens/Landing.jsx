@@ -64,7 +64,7 @@ export default function Landing() {
       <Reviews />
       <Services />
       <Projects/>
-      <Locations/>
+      {/* <Locations/> */}
       <OtherAreas/>
       <Contact />
       <Footer />
