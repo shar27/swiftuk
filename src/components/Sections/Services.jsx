@@ -17,6 +17,9 @@ import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOu
 import ConstructionIcon from '@mui/icons-material/Construction';
 import FormatPaintOutlinedIcon from '@mui/icons-material/FormatPaintOutlined';
 import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
+import CameraOutdoorIcon from '@mui/icons-material/CameraOutdoor';
+import LightIcon from '@mui/icons-material/Light';
+import RoofingIcon from '@mui/icons-material/Roofing';
 
 export default function Services() {
   return (
@@ -59,6 +62,17 @@ export default function Services() {
              <h4>House Clearance <br/> & Removals</h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
+              <CameraOutdoorIcon
+              sx={{
+                width:100,
+                height:100,
+              }}
+              >
+             
+             </CameraOutdoorIcon>
+             <h4>CCTV Installation</h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
               <CleaningIcon
               
               >
@@ -95,7 +109,28 @@ export default function Services() {
               </PaintIcon>
               <h4>Painting <br/> & re-decorating</h4>
             </ServiceBoxWrapper>
-            
+            <ServiceBoxWrapper>
+              <LightIcon
+              sx={{
+                width:100,
+                height:100,
+              }}
+              >
+                
+              </LightIcon>
+              <h4>Electrician</h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <RoofingIcon
+              sx={{
+                width:100,
+                height:100,
+              }}
+              >
+                
+              </RoofingIcon>
+              <h4>Roofing Repairs</h4>
+            </ServiceBoxWrapper>
           
           </ServiceBoxRow>
          <h4>We offer a wide range of other services - get in contact today to see how we can help</h4>

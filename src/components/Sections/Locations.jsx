@@ -45,7 +45,7 @@ export default function Locations() {
 
 const LocationsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   margin-top: -12px;
   padding: 1.25rem;
