@@ -45,7 +45,7 @@ export default function TopNavbar() {
         </a>
         <a href="tel:03333606113"
          onClick={handleCallClick}
-        >📞 03333606113</a>
+        >📞 0333 360 6113</a>
       </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
@@ -164,7 +164,7 @@ export default function TopNavbar() {
         </ul>
       )}
     </li>
-    <li className="semiBold font15 pointer">
+    {/* <li className="semiBold font15 pointer">
               <RouterLink
                 className="pointer"
                 style={{ padding: "10px 15px" }}
@@ -172,7 +172,7 @@ export default function TopNavbar() {
               >
                 0% Interest Finance
               </RouterLink>
-            </li>
+            </li> */}
             <li className="semiBold font15 pointer">
               <RouterLink
                 className="pointer"
@@ -215,7 +215,7 @@ export default function TopNavbar() {
              
 
               >
-                Call today 📞 03333606113
+                Call today 📞 0333 360 6113
               </a>
             </li>
           </UlWrapperRight>

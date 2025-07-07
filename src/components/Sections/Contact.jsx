@@ -55,7 +55,7 @@ export default function Contact() {
           window.location.replace("/thankyou");
         },
         (error) => {
-          setMessage("Error sending message, please email hello@bristolpropertymaintenance.co.uk");
+          setMessage("Error sending message, please email hello@swiftukproperties.co.uk");
           console.log(error.text);
         }
       );

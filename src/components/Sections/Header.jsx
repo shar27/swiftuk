@@ -16,20 +16,20 @@ export default function Header() {
       <LeftSide className="flexCenter">
         <div>
         <HeadingTag>
-        Bristol Property Maintenance -
-        Serving Bristol & surrounding areas.
+        Swift UK Property Maintenance -
+        Nationwide coverage.
           </HeadingTag>
           <LargeHeading>
-          <h2 className="extraBold font40">Bristol Property Maintenance</h2>
+          <h2 className="extraBold font40">Swift UK Property Maintenance</h2>
           
           <HeaderP className="font13 semiBold">
-          Fully insured and trusted by Bristol landlords, agents, and homeowners. Free quotes with 0% finance available.
+          Fully insured and trusted by Deputy Court Solicitors, landlords, agents, and homeowners. Free quotes with 0% finance available.
 
           </HeaderP>
 </LargeHeading>
           <SmallHeading>
 
-              Fully insured and trusted by Bristol landlords, agents, and homeowners. Free quotes with 0% finance available.
+              Fully insured and trusted by Deputy Court Solicitors, landlords, agents, and homeowners. Free quotes with 0% finance available.
           </SmallHeading>
           <BtnWrapper>
             <a href="#contactForm">
