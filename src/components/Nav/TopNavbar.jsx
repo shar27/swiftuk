@@ -40,12 +40,12 @@ export default function TopNavbar() {
   return (
     <>
       <ContactInfoSmallScreen>
-        <a href="mailto:hello@bristolpropertymaintenance.co.uk">
-          📧 hello@bristolpropertymaintenance.co.uk
+        <a href="mailto:hello@swiftukproperties.co.uk">
+          📧 hello@swiftukproperties.co.uk
         </a>
-        <a href="tel:01172990185"
+        <a href="tel:03333606113"
          onClick={handleCallClick}
-        >📞 0117 299 0185</a>
+        >📞 03333606113</a>
       </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
@@ -203,19 +203,19 @@ export default function TopNavbar() {
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <a
-                href="mailto:hello@bristolpropertymaintenance.co.uk"
+                href="mailto:hello@swiftukproperties.co.uk"
                 style={{ padding: "10px 30px 10px 0" }}
               >
-                📧 hello@bristolpropertymaintenance.co.uk
+                📧 hello@swiftukproperties.co.uk
               </a>
               <br />
-              <a href="tel:01172990185" 
+              <a href="tel:03333606113" 
                onClick={handleCallClick}
               style={{ padding: "10px 30px 10px 0" }}
              
 
               >
-                Call today 📞 0117 299 0185
+                Call today 📞 03333606113
               </a>
             </li>
           </UlWrapperRight>
