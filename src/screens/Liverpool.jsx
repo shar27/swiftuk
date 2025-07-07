@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 // Sections
 import TopNavbar from "../components/Nav/TopNavbar";
-import CommercialHeader from '../components/Sections/Commercial/CommercialHeader'
+import Header from "../components/Sections/Header";
+import Services from "../components/Sections/Services";
+import Reviews from "../components/Sections/Reviews";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer";
+import Locations from "../components/Sections/Locations";
 import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
 
 export default function Landing() {
@@ -32,7 +35,7 @@ export default function Landing() {
   return (
     <>
       <TopNavbar />
-      <CommercialHeader />
+      <Header />
       <FloatWrapper>
         <a href="https://wa.me/447907772626">
           <Img src={WhatsApp} alt="WhatsApp" />
@@ -56,6 +59,9 @@ export default function Landing() {
           </ArrowButton>
         )}
       </FloatWrapper>
+      <Reviews />
+      <Services />
+      <Locations/>
       <Contact />
       <Footer />
     </>

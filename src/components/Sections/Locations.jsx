@@ -3,7 +3,7 @@ import styled from "styled-components";
 import navRoutes from "../../config/navRoutes";
 
 export default function Locations() {
-  const baseUrl = "https://swiftukproperties.co.uk/";
+  const baseUrl = "https://www.bristolpropertymaintenance.co.uk/";
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
@@ -11,7 +11,9 @@ export default function Locations() {
 
   return (
     <div>
-      
+      <h2 style={{ color: "black", fontSize: "32px", textAlign: "center" }}>
+        Areas we cover
+      </h2>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0B093B"
@@ -20,7 +22,7 @@ export default function Locations() {
         ></path>
       </svg>
       <LocationsWrapper>
-        {/* {Object.keys(navRoutes).map((key, index) => (
+        {Object.keys(navRoutes).map((key, index) => (
           <a
             href={`${baseUrl}/${navRoutes[key]}`}
             key={index}
@@ -28,15 +30,7 @@ export default function Locations() {
           >
             {capitalizeFirstLetter(navRoutes[key])}
           </a>
-        ))} */}
-        <a href="https://www.propertymaintenanceleicester.com/">Leicester Property Maintenance </a>
-        <a href="https://www.cardiffpropertymaintenance.co.uk/">Cardiff Property Maintenance</a>
-        <a href="https://propertymaintenancemanchester.co.uk/">Manchester Property Maintenance </a>
-        <a href="https://www.bristolpropertymaintenance.co.uk/">Bristol Property Maintenance</a>
-        <a href="https://www.liverpoolpropertymaintenance.com/">Liverpool Property Maintenance</a>
-        <a href="https://www.readingpropertymaintenance.co.uk/">Reading Property Maintenance</a>
-        <a href="https://www.lancasterlandscaping.co.uk/">Lancaster Landscaping</a>
-
+        ))}
       </LocationsWrapper>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -51,7 +45,7 @@ export default function Locations() {
 
 const LocationsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   margin-top: -12px;
   padding: 1.25rem;
